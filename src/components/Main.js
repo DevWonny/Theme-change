@@ -1,14 +1,24 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux/es/exports";
+import { useSelector, useDispatch } from "react-redux";
 
 import styled from "styled-components";
+import { dark, white } from "../modules/theme";
 
 const Main = () => {
   const mode = useSelector((state) => state.theme.mode);
+  const dispatch = useDispatch();
+
+  const onChangeTheme = () => {
+    if (!mode) {
+      dispatch(dark());
+    } else {
+      dispatch(white());
+    }
+  };
 
   return (
     <MainContainer>
-      <ChangeButton>Change</ChangeButton>
+      <ChangeButton onClick={onChangeTheme}>Change</ChangeButton>
     </MainContainer>
   );
 };

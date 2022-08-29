@@ -18,6 +18,7 @@ const Main = () => {
 
   return (
     <MainContainer>
+      <p>test</p>
       <ChangeButton onClick={onChangeTheme}>Change</ChangeButton>
     </MainContainer>
   );
@@ -38,6 +39,5 @@ const ChangeButton = styled.button`
   height: 30%;
   border: none;
   border-radius: 100px;
-  background-color: aqua;
   cursor: pointer;
 `;

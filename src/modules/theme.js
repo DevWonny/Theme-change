@@ -8,7 +8,7 @@ export const white = () => ({ type: WHITE });
 
 // 초기화
 const initialState = {
-  mode: false,
+  mode: true,
 };
 
 // reducer
